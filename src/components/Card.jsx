@@ -2,9 +2,19 @@ import React  from "react";
 import star from '../assets/images/star.png'
 
 const Card = (props) => {
-    const {img, rating, reviewCount, country, title, price} = props
+    const {img, rating, reviewCount, country, title, price, openSpots} = props
+
+    let badgeText;
+    if(openSpots === 0 ){
+        badgeText = "SOLD OUT"
+    }else if (country === "Online"){
+        badgeText = "ONLINE"
+    }
+
     return (
         <div className="card">
+            {badgeText && <div className="card--badge">{badgeText}</div>}
+
             <img src={img} className='card--photo' />
 
             <div className="card--stats">

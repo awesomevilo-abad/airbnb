@@ -3,7 +3,7 @@ import star from '../assets/images/star.png'
 
 const Card = (props) => {
 
-    const {coverImg, rating, reviewCount, location, title, price, openSpots} = props.item
+    const {coverImg, rating, reviewCount, location, title, price, openSpots} = props
 
     let badgeText;
     if(openSpots === 0 ){

@@ -3,7 +3,7 @@ import star from '../assets/images/star.png'
 
 const Card = (props) => {
 
-    const {coverImg, rating, reviewCount, location, title, price, openSpots} = props
+    const {coverImg, stats, reviewCount, location, title, price, openSpots} = props
 
     let badgeText;
     if(openSpots === 0 ){
@@ -20,8 +20,8 @@ const Card = (props) => {
 
             <div className="card--stats">
                 <img src={star} className='card--star' />
-                <span >{rating}</span>
-                <span className="gray">({reviewCount}) - </span>
+                <span >{stats.rating}</span>
+                <span className="gray">({stats.reviewCount}) - </span>
                 <span className="gray">{location}</span>
             </div>
                 <p className="card--title">{title}</p>

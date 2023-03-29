@@ -16,7 +16,7 @@ const Card = (props) => {
         <div className="card">
             {badgeText && <div className="card--badge">{badgeText}</div>}
 
-            <img src={coverImg} className='card--photo' />
+            <img src={`../assets/images/${coverImg}`} className='card--photo' />
 
             <div className="card--stats">
                 <img src={star} className='card--star' />
